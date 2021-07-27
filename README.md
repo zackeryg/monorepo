@@ -1,11 +1,11 @@
 # Lerna Mono Repo
 
-Demo mono repo for Renovate Bot internal package renovation
+Demo Mono Repo
 
-To run locally
+Includes packages and a UI
 
 ```
-npx lerna bootstrap
-npm run test
-npx lerna run start
+npm i -g npm@7
+npm i
+npm run start -w @zgriesinger/react-app
 ```
