@@ -8,7 +8,7 @@ function App() {
         <div className="App-logo" alt="logo" style={{ fontSize: "10rem" }}>
           🐫
         </div>
-        <h3> Demo App Camelifying from a Sub Package </h3>
+        <h3> Second Demo App Camelifying from a Sub Package </h3>
         <p>Check out the camels below</p>
         <p>{camelify("Edit <code>src/App.js</code> and save to reload.")}</p>
         <a
