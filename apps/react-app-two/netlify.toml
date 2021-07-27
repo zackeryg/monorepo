@@ -1,4 +1,4 @@
 [build]
   publish = "apps/react-app-two/build"
-  [environment]
+  [build.environment]
     NPM_VERSION = "7.20.1"
