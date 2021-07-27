@@ -1,3 +1,3 @@
 const camelify = require("./camelify");
 
-camelify();
+module.exports = camelify;
