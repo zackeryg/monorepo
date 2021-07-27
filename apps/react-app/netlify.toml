@@ -1,6 +1,6 @@
 [build]
   publish = "apps/react-app/build"
-  command = "cd ../../../ && npm i -g npm@7 && NPM_CONFIG_DRY_RUN=false NPM_CONFIG_ONLY=null npm i && npm run build -w @zgriesinger/react-app"
+  command = "cd ../../ && npm i -g npm@7 && NPM_CONFIG_DRY_RUN=false NPM_CONFIG_ONLY=null npm i && npm run build -w @zgriesinger/react-app"
 
   [build.environment]
     REACT_APP_CAMELIFY_VERSION = "one"
