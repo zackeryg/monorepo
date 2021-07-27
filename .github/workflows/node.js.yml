@@ -27,4 +27,4 @@ jobs:
     - run: |
         npm i -g npm@7
         npm i
-    - run: npm test
+    - run: npm run test --workspaces

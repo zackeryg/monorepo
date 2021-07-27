@@ -18,7 +18,7 @@
     "url": "git+https://github.com/zgriesinger/lerna-monorepo.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "jest",
     "start": "node lib/index.js"
   },
   "bugs": {
