@@ -1,9 +1,9 @@
 [build]
   publish = "apps/react-app/build"
-  command = "cd ../../../ && NPM_CONFIG_DRY_RUN=false NPM_CONFIG_ONLY=null npm i -g npm@7 && npm i && npm run build -w @zgriesinger/react-app"
+  command = "cd ../../../ && npm i -g npm@7 && npm i && npm run build -w @zgriesinger/react-app"
 
   [build.environment]
     NPM_VERSION = "7.20.1"
-    NPM_CONFIG_DRY_RUN = "true"
-    NPM_CONFIG_ONLY = "development"
+    # NPM_CONFIG_DRY_RUN = "true"
+    # NPM_CONFIG_ONLY = "development"
     NPM_CONFIG_NO_AUDIT = "true"
