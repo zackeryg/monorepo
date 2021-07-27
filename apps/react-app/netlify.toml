@@ -1,5 +1,5 @@
 [build]
-  publish = "apps/react-app/build"
+  publish = "build"
   command = "cd ../../ && NPM_CONFIG_ONLY=null npm i -g npm@7 && npm -v  && NPM_CONFIG_ONLY=null npm i && npm run build -w @zgriesinger/react-app"
 
   [build.environment]
