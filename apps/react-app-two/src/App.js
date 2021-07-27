@@ -9,6 +9,11 @@ function App() {
           🐫
         </div>
         <h3> Second Demo App Camelifying from a Sub Package </h3>
+        <h5>
+          Camelify Version:{" "}
+          {process.env.REACT_APP_CAMELIFY_VERSION ||
+            "ERROR NO VERSION SPECIFIED"}{" "}
+        </h5>
         <p>Check out the camels below</p>
         <p>{camelify("Edit <code>src/App.js</code> and save to reload.")}</p>
         <a

@@ -1,4 +1,6 @@
 [build]
   publish = "apps/react-app-two/build"
+  command = "npm run build -w @zgriesinger/react-app-two"
   [build.environment]
     NPM_VERSION = "7.20.1"
+    REACT_APP_CAMELIFY_VERSION = "two"
