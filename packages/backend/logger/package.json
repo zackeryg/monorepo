@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "Logger for backend apps",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgriesinger/monorepo/issues"
+  },
+  "author": "zgriesinger",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^8.0.6"
+  }
+}

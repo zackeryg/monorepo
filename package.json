@@ -1,0 +1,23 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "Mono Repo of Next/Nest/React/Shared Packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "workspaces": [
+    "apps/*/*",
+    "packages/*/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgriesinger/monorepo.git"
+  },
+  "author": "zgriesinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zgriesinger/monorepo/issues"
+  },
+  "homepage": "https://github.com/zgriesinger/monorepo#readme"
+}
