@@ -1,8 +1,0 @@
-[build]
-  publish = "build"
-  command = "cd ../../ && NPM_CONFIG_ONLY=null npm i -g npm@7 && npm -v  && NPM_CONFIG_ONLY=null npm i && npm run build -w @zgriesinger/react-app"
-
-  [build.environment]
-    REACT_APP_CAMELIFY_VERSION = "one"
-    NPM_CONFIG_ONLY = "development"
-    NPM_VERSION = "7.20.1"
