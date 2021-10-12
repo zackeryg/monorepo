@@ -10,6 +10,10 @@
     "apps/*/*",
     "packages/*/*"
   ],
+  "engines": {
+    "npm": ">=7",
+    "node": "=14.16.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zgriesinger/monorepo.git"
