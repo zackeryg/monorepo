@@ -1,6 +1,6 @@
 {
   "name": "logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logger for backend apps",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "zgriesinger",
   "license": "ISC",
   "dependencies": {
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@nestjs/common": "^8.0.6",
     "logger": "^1.0.0",
     "ts-jest": "^27.0.3"
