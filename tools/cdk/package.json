@@ -1,6 +1,6 @@
 {
   "name": "cdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bin-backup": {
     "cdk": "bin/cdk.js"
   },
@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "@aws-cdk/core": "1.134.0",
-    "source-map-support": "0.5.20"
+    "source-map-support": "0.5.21"
   }
 }
