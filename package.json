@@ -7,8 +7,10 @@
     "test": "jest"
   },
   "workspaces": [
-    "apps/*/*",
-    "packages/*/*"
+    "frontend/*",
+    "backend/*",
+    "packages/*/*",
+    "tools/*"
   ],
   "engines": {
     "npm": "=7.19"
