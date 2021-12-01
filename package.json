@@ -8,6 +8,7 @@
   },
   "workspaces": [
     "frontend/*",
+    "api/*",
     "backend/*",
     "packages/*/*",
     "tools/*"

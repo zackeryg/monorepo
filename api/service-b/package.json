@@ -1,5 +1,5 @@
 {
-  "name": "service-b",
+  "name": "@zgriesinger/service-b",
   "version": "0.0.5",
   "description": "",
   "author": "",
@@ -24,7 +24,7 @@
     "@nestjs/common": "8.2.3",
     "@nestjs/core": "8.2.3",
     "@nestjs/platform-express": "8.2.3",
-    "logger": "^1.0.0",
+    "@zgriesinger/logger": "^1.0.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.3.0"
