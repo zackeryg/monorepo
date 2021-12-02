@@ -27,6 +27,10 @@ export default class AppRunnerStack extends cdk.Stack {
 
     new codebuild.Project(this, `codebuild-${id}`, {
       source: gitHubSource,
+      projectName: id,
+      environment: {
+        buildImage: codebuild.LinuxBuildImage.fromCodeBuildImageId('aws/codebuild/standard:4.0.')
+      },
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',
         phases: {
