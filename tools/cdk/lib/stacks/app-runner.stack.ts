@@ -25,11 +25,12 @@ export default class AppRunnerStack extends cdk.Stack {
       ], // optional, by default all pushes and Pull Requests will trigger a build
     });
 
-    new codebuild.Project(this, `codebuild-${id}`, {
+    const build = new codebuild.Project(this, `codebuild-${id}`, {
       source: gitHubSource,
       projectName: id,
       environment: {
-        buildImage: codebuild.LinuxBuildImage.fromCodeBuildImageId('aws/codebuild/standard:4.0.')
+        // buildImage: codebuild.LinuxBuildImage.fromCodeBuildImageId('aws/codebuild/standard:4.0')
+        privileged: true
       },
       buildSpec: codebuild.BuildSpec.fromObject({
         version: '0.2',

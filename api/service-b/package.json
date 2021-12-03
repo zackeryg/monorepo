@@ -21,6 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "deploy": "cdk deploy",
     "bootstrap": "cdk bootstrap",
+    "synth": "cdk synth",
     "destroy": "cdk destroy"
   },
   "dependencies": {

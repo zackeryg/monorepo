@@ -5,6 +5,7 @@ import { DockerImageAsset } from '@aws-cdk/aws-ecr-assets';
 
 import * as ecs_patterns from '@aws-cdk/aws-ecs-patterns';
 import createDockerImageAsset from '../assets/docker-image.asset';
+import { InstanceType, MachineImage } from '@aws-cdk/aws-ec2';
 
 // import * as sqs from '@aws-cdk/aws-sqs';
 
@@ -23,16 +24,18 @@ export default class FargateStack extends cdk.Stack {
     });
 
     const cluster = new ecs.Cluster(this, `${id}-cluster`, {
-      vpc
+      vpc,
+      capacity: {
+        machineImage: MachineImage.genericLinux({
+          'us-east-1': 'ami-0a1eddae0b7f0a79f',
+        }),
+        // machineImage: ecs.EcsOptimizedImage.amazonLinux2(),
+        instanceType: new InstanceType('t4g.micro'),
+      },
     });
 
-        
-    cluster.addCapacity('DefaultAutoScalingGroupCapacity', {
-      instanceType: new ec2.InstanceType("t4g.micro"),
-      desiredCapacity: 1,
-    });
 
-    new ecs_patterns.ApplicationLoadBalancedFargateService(
+    const service = new ecs_patterns.ApplicationLoadBalancedFargateService(
       this,
       `${id}-fargate-service`,
       {
@@ -40,6 +43,7 @@ export default class FargateStack extends cdk.Stack {
         cpu: 512,
         listenerPort: 3000,
         desiredCount: 1,
+        serviceName: id,
         taskImageOptions: {
           // image: ecs.ContainerImage.fromRegistry('amazon/amazon-ecs-sample'),
           image: ecs.ContainerImage.fromDockerImageAsset(
@@ -50,9 +54,5 @@ export default class FargateStack extends cdk.Stack {
         publicLoadBalancer: true,
       }
     );
-    // example resource
-    // const queue = new sqs.Queue(this, 'CdkQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
   }
 }
