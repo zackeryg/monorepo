@@ -21,8 +21,14 @@ export default class AmplifyStack extends cdk.Stack {
         frontend: {
           // appRoot: 'frontend/static',
           phases: {
+            install: {
+              commands: ['npm i -g npm@7.19'],
+              'runtime-versions': {
+                'nodejs': '14.x'
+              }
+            },
             preBuild: {
-              commands: ['npm i -g npm@7.19 && npm i'],
+              commands: ['npm i'],
             },
             build: {
               commands: [
@@ -31,7 +37,7 @@ export default class AmplifyStack extends cdk.Stack {
             }
           },
           artifacts: {
-            baseDirectory: 'out',
+            baseDirectory: 'frontend/static/out',
             files: ['**/*']
           },
           cache: {
