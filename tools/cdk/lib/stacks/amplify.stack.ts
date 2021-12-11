@@ -17,11 +17,14 @@ export default class AmplifyStack extends cdk.Stack {
         version: '1.0',
         frontend: {
           phases: {
-            preBuild: {
-              commands: ['npm i'],
+            install: {
+              commands: ['npm i -g npm@7.19'],
               runtimeVersions: {
                 nodejs: '14'
               }
+            },
+            preBuild: {
+              commands: ['npm i'],
             },
             build: {
               commands: [
