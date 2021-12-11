@@ -13,13 +13,16 @@ export default class AmplifyStack extends cdk.Stack {
         oauthToken: cdk.SecretValue.secretsManager('github-token', { jsonField: 'github-token' }),
         
       }),
+      // environmentVariables: {
+      //   AMPLIFY_MONOREPO_APP_ROOT: 'frontend/static',
+      // },
       buildSpec: codebuild.BuildSpec.fromObjectToYaml({
         version: '1.0',
         frontend: {
-          appRoot: 'frontend/static',
+          // appRoot: 'frontend/static',
           phases: {
             preBuild: {
-              commands: ['npm i'],
+              commands: ['npm i -g npm@7.19 && npm i'],
             },
             build: {
               commands: [
