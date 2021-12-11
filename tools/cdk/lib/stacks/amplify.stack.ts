@@ -16,13 +16,8 @@ export default class AmplifyStack extends cdk.Stack {
       buildSpec: codebuild.BuildSpec.fromObjectToYaml({
         version: '1.0',
         frontend: {
+          appRoot: 'frontend/static',
           phases: {
-            install: {
-              commands: ['npm i -g npm@7.19'],
-              runtimeVersions: {
-                nodejs: '14'
-              }
-            },
             preBuild: {
               commands: ['npm i'],
             },
@@ -33,8 +28,11 @@ export default class AmplifyStack extends cdk.Stack {
             }
           },
           artifacts: {
-            baseDirectory: 'frontend/static/out',
+            baseDirectory: 'out',
             files: ['**/*']
+          },
+          cache: {
+            paths: ['node_modules/**/*']
           }
         },
       }),
