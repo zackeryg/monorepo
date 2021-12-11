@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node --prefer-ts-exts --project tsconfig.cdk.json bin/cdk.ts"
+}
