@@ -33,7 +33,7 @@ export default class AmplifyStack extends cdk.Stack {
             },
             build: {
               commands: [
-                'npm run build -w @zgriesinger/static'
+                `npm run build -w @zgriesinger/${id}`
               ]
             }
           },
