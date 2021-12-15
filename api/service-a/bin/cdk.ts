@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-import { FargateStack, cdk } from '@zgriesinger/cdk';
+import { EKSFargateStack, cdk } from '@zgriesinger/cdk';
 
 const app = new cdk.App();
 
 
-new FargateStack(app, 'service-a', {
+new EKSFargateStack(app, 'service-a', {
+  port: 3000,
   env: {
     account: '436288151216',
     region: 'us-east-1' 

@@ -16,6 +16,7 @@ export default class AmplifyStack extends cdk.Stack {
       // environmentVariables: {
       //   AMPLIFY_MONOREPO_APP_ROOT: 'frontend/static',
       // },
+     
       buildSpec: codebuild.BuildSpec.fromObjectToYaml({
         version: '1.0',
         frontend: {
