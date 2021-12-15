@@ -6,7 +6,7 @@ import * as cdk from '@aws-cdk/core';
 import * as ecrAssets from '@aws-cdk/aws-ecr-assets';
 
 // TODO Idk if i like this reexporting, def saves time tho
-export {
+export {        
   FargateStack,
   cdk,
   ecrAssets,

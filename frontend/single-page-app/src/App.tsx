@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MDEditor from '@uiw/react-md-editor';
+import { Button, Pane, Text, majorScale } from 'evergreen-ui';
 
 function App() {
+  const [value, setValue] = React.useState<any>("**Hello world!!!**");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto">
+      <Pane alignItems="center" marginX={majorScale(12)} justifyContent="center" style={{ textAlign: 'center'}}>
+        <h1>
+          Write Prose
+        </h1>
+        <div className="m-8">
+          <MDEditor value={value} onChange={setValue} />
+          <Button style={{ width: '80%', margin: '2rem' }} appearance="primary">Share!</Button>
+        </div>
+      </Pane>
     </div>
   );
 }
