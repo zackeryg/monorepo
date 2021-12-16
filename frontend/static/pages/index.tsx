@@ -16,7 +16,7 @@ const Home: NextPage = () => {
           <p className="max-w-md">Write Prose is an app you can use to write prose in Markdown and share with anyone!</p>
           <h1 className="">Write and Share:</h1>
           <div className="typewriter mb-0" style={{ marginTop: 0}}><h1>Prose, Code, Notes, Documentation and more!</h1></div>
-          <button className="px-24 h-10 bg-blue-600 text-blue-100 transition-color duration-150s rounded-lg focus:shadow-outline hover:bg-blue-700">Go to the App</button>
+          <button className="px-24 h-10 bg-blue-600 text-blue-100 transition-color duration-150s rounded-lg focus:shadow-outline hover:bg-blue-700"><a href="https://main.d291xudq2zn7bn.amplifyapp.com/">Go to the App</a></button>
         </div>
       </main>
     </div>

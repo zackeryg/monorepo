@@ -1,21 +1,20 @@
 import * as cdk from '@aws-cdk/core';
 import * as lambda from '@aws-cdk/aws-lambda';
+import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 
 interface LambdaStackProps extends cdk.StackProps {
+  entry?: string;
   handler?: string;
-  pathToCode: string;
 }
 
 export default class LambdaStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props: LambdaStackProps) {
     super(scope, id, props);
-
-    const fn = new lambda.Function(this, id, {
+    console.log(props);
+    const fn =  new NodejsFunction(this, id, {
       runtime: lambda.Runtime.NODEJS_14_X,
-      // 100% worst way to do this prolly
-      handler: props.handler || 'index.handler',
-      code: lambda.Code.fromAsset(props.pathToCode)
-    })
-
+      handler: props.handler,
+      entry: props.entry,
+    });
   }
 }

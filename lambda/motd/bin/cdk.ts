@@ -5,7 +5,8 @@ import * as path from 'path';
 const app = new cdk.App();
 
 new LambdaStack(app, 'motd', {
-  pathToCode: path.join('../dist'),
+  handler: 'index.handler',
+  entry: path.resolve('motd/index.ts'),
   env: {
     account: '436288151216',
     region: 'us-east-1' 
