@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc",
+    "build": "sls package",
     "test": "jest",
-    "deploy": "npm run build && cdk deploy"
+    "deploy": "sls package && cdk deploy"
   },
   "repository": {
     "type": "git",
