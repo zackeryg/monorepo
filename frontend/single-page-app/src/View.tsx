@@ -22,7 +22,7 @@ export default function View() {
           justifyContent="center"
           style={{ textAlign: "center" }}
         >
-          <MDEditor.Markdown source={content} />
+          <MDEditor.Markdown source={content.content} />
         </Pane>
       ) : (
         <Pane

@@ -10,8 +10,9 @@ const dynamoDB = new AWS.DynamoDB.DocumentClient({
 @Injectable()
 export class AppService {
   async create(content: string) {
+    const id = uuid();
     const prose = {
-      id: uuid(),
+      id,
       content,
     };
 
@@ -22,7 +23,7 @@ export class AppService {
           Item: prose,
         })
         .promise();
-      return 'created';
+      return id;
     } catch (error) {
       throw new InternalServerErrorException(error);
     }
