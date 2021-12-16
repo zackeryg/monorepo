@@ -2,8 +2,12 @@ import * as amplify from '@aws-cdk/aws-amplify';
 import * as cdk from '@aws-cdk/core';
 import * as codebuild from '@aws-cdk/aws-codebuild';
 
+interface AmplifyStackProps extends cdk.StackProps {
+  buildDirectory: string;
+}
+
 export default class AmplifyStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.Construct, id: string, props: AmplifyStackProps) {
     super(scope, id, props);
 
     const amplifyApp = new amplify.App(this, id, {
@@ -38,7 +42,7 @@ export default class AmplifyStack extends cdk.Stack {
             }
           },
           artifacts: {
-            baseDirectory: 'frontend/static/out',
+            baseDirectory: props.buildDirectory,
             files: ['**/*']
           },
           cache: {

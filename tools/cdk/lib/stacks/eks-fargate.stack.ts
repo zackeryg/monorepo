@@ -1,7 +1,9 @@
 import * as cdk from '@aws-cdk/core';
+import * as ecs from '@aws-cdk/aws-ecs';
 import * as eks from '@aws-cdk/aws-eks';
 import * as iam from '@aws-cdk/aws-iam';
 import getAppChart from '../charts/api.chart';
+import createDockerImageAsset from '../assets/docker-image.asset';
 
 interface EKSFargateStackProps extends cdk.StackProps {
   port: number
@@ -21,7 +23,10 @@ export default class EKSFargateStack extends cdk.Stack {
       version: eks.KubernetesVersion.V1_21,
       mastersRole: masterRole,
     });
+    
+    const image = createDockerImageAsset(this, id)
+    
 
-    cluster.addCdk8sChart(id, getAppChart(id, props.port))
+    cluster.addCdk8sChart(id, getAppChart(id, props.port, image.imageUri))
   }
 }
