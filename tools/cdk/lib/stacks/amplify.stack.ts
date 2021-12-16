@@ -33,7 +33,7 @@ export default class AmplifyStack extends cdk.Stack {
               }
             },
             preBuild: {
-              commands: ['npm i -g npm@7.19 && npm i'],
+              commands: ['ls && npm i -g npm@7.19 && npm i'],
             },
             build: {
               commands: [
