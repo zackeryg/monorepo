@@ -5,8 +5,9 @@ import * as path from 'path';
 const app = new cdk.App();
 
 new LambdaStack(app, 'motd', {
-  handler: 'index.handler',
-  entry: path.resolve('motd/index.ts'),
+  handler: 'handler',
+  description: 'Present a quote of the day',
+  entry: path.resolve('index.ts'),
   env: {
     account: '436288151216',
     region: 'us-east-1' 

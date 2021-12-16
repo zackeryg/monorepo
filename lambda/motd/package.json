@@ -7,7 +7,8 @@
     "start": "tsc -w",
     "build": "tsc",
     "test": "jest",
-    "deploy": "cdk deploy"
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy"
   },
   "repository": {
     "type": "git",
