@@ -1,6 +1,6 @@
 {
   "name": "@zgriesinger/motd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lambda function to display the motd in WriteProse",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/zgriesinger/monorepo#readme",
   "dependencies": {
-    "got": "^9.6.0"
+    "got": "^11.0.0"
   },
   "devDependencies": {
     "@zgriesinger/cdk": "^0.1.0",
