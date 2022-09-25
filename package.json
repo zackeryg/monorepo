@@ -1,6 +1,6 @@
 {
   "name": "monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mono Repo of Next/Nest/React/Shared Packages",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "tools/*"
   ],
   "engines": {
-    "npm": "=7.19"
+    "npm": "=8.19.2"
   },
   "repository": {
     "type": "git",
