@@ -1,6 +1,6 @@
 {
   "name": "@zgriesinger/service-a",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "author": "",
   "private": true,
@@ -28,15 +28,15 @@
     "@nestjs/common": "8.2.3",
     "@nestjs/core": "8.2.3",
     "@nestjs/platform-express": "8.2.3",
-    "@skypress/nestjs-dynamodb": "^0.1.0",
+    "@skypress/nestjs-dynamodb": "0.1.0",
     "@zgriesinger/cdk": "^0.1.0",
     "@zgriesinger/logger": "^1.0.1",
-    "aws-sdk": "^2.1046.0",
-    "nanoid": "^3.1.30",
+    "aws-sdk": "2.1046.0",
+    "nanoid": "3.1.30",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.3.0",
-    "uuid": "^8.3.2"
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "@nestjs/cli": "8.1.5",
