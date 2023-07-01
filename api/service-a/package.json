@@ -1,6 +1,6 @@
 {
   "name": "@zgriesinger/service-a",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "author": "",
   "private": true,
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@nestjs/common": "8.2.3",
-    "@nestjs/core": "8.2.3",
+    "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "8.2.3",
     "@skypress/nestjs-dynamodb": "^0.1.0",
     "@zgriesinger/cdk": "^0.1.0",
